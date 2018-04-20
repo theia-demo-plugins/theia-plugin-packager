@@ -18,12 +18,22 @@ jest.mock("archiver");
 
 describe("Test zip with mocks", () => {
 
+    let tmpZip: string;
+
+    beforeEach(() => {
+        tmpZip = tmp.fileSync({ mode: 0o644, prefix: "tmpZip", postfix: ".zip" }).name;
+    });
+
+    afterEach(() => {
+        fs.unlinkSync(tmpZip);
+    });
+
     test("invalid zip error", async () => {
         const zip = new Zip();
 
         let error = null;
         try {
-        await zip.zipFiles(["foo.entry"], "foo", "zipExamplePath");
+        await zip.zipFiles(["foo.entry"], tmpZip, "zipExamplePath");
         } catch (e) {
             error = e;
         }
