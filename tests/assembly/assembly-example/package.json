@@ -1,7 +1,7 @@
 {
     "name": "assembly-example-test",
     "engines": {
-      "theia": "latest"
+      "theiaPlugin": "latest"
     },
     "theiaPlugin": {
       "frontend": "./index.js"

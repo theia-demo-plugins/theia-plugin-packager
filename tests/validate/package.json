@@ -1,6 +1,6 @@
 {
  "engines": {
-     "theia": "latest"
+     "theiaPlugin": "latest"
  },
  "theiaPlugin" : {
     "frontend": "./validate.spec.ts",

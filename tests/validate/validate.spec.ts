@@ -48,7 +48,7 @@ describe("Test validate", () => {
             error = e;
         }
         expect(error).toBeDefined();
-        expect(error.message).toMatch(/There is a missing theia "engine" section.*$/m);
+        expect(error.message).toMatch(/There is a missing theiaPlugin "engine" section.*$/m);
     });
 
     test("no theiaPlugin", async () => {

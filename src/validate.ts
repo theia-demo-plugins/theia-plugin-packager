@@ -43,8 +43,8 @@ export class Validate {
         if (!(pluginPackageJson.engines)) {
             throw new CliError('There is no "engines" section in the '
                 + packageJsonPath + " file. " + missingEngineSuggest);
-        } else if (!pluginPackageJson.engines.theia) {
-            throw new CliError('There is a missing theia "engine" section in the '
+        } else if (!pluginPackageJson.engines.theiaPlugin) {
+            throw new CliError('There is a missing theiaPlugin "engine" section in the '
                 + packageJsonPath + " file. " + missingEngineSuggest);
         }
     }
