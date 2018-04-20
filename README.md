@@ -1,6 +1,6 @@
 # Theia plugin utility
 
-Allow to package a plugin, etc.
+Allow to package a plugin.
 
 ## License
 
