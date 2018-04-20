@@ -11,27 +11,27 @@
 /**
  * Fake errors
  */
-module.exports = function() {
- 
+module.exports = (): any => {
+    /* tslint:disable:no-empty */
+
     return {
         on: (type, callback) => {
         if (type === "error") {
         callback(new Error("error from archive"));
-        }     
+        }
     },
 
     pipe: () => {
-        
+
     },
 
     file: () => {
-        
+
     },
 
-    
     finalize: () => {
-        
-    }
+
+    },
 
 };
 };
