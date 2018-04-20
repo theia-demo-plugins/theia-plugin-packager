@@ -1,0 +1,65 @@
+{
+  "name": "@wiptheia/plugin-package",
+  "version": "0.0.1",
+  "description": "Package theia plugins",
+  "author": "Florent Benoit",
+  "license": "Apache-2.0",
+  "bin": {
+    "theia:plugin": "./dist/index.js"
+  },
+  "dependencies": {
+    "archiver": "^2.1.1",
+    "chalk": "^2.4.0",
+    "glob-promise": "^3.4.0",
+    "micromatch": "^3.1.10",
+    "read-pkg": "^3.0.0",
+    "yargs": "^11.0.0"
+  },
+  "devDependencies": {
+    "@types/archiver": "^2.1.1",
+    "@types/jest": "^22.2.3",
+    "@types/micromatch": "^3.1.0",
+    "@types/node": "^9.6.5",
+    "@types/read-pkg": "^3.0.0",
+    "@types/tmp": "^0.0.33",
+    "@types/yargs": "^11.0.0",
+    "jest": "^22.4.3",
+    "rimraf": "^2.6.1",
+    "tmp": "^0.0.33",
+    "ts-jest": "^22.4.3",
+    "tslint": "^5.9.1",
+    "typescript": "^2.8.1",
+    "typescript-formatter": "^7.2.0",
+    "unzipper": "^0.8.13"
+  },
+  "files": [
+    "src"
+  ],
+  "scripts": {
+    "prepare": "yarn run clean && yarn run build",
+    "clean": "rimraf dist",
+    "build": "yarn run compile && yarn run format-code && yarn run tslint && yarn run test",
+    "compile": "tsc && chmod +x dist/index.js",
+    "watch": "tsc -w",
+    "test": "jest",
+    "test-watch": "jest --watchAll",
+    "format-code": "tsfmt -r",
+    "tslint": "tslint --fix src/*.ts src/**/*.ts tests/**/*.ts"
+  },
+  "jest": {
+    "collectCoverage": true,
+    "coverageDirectory": "./coverage",
+    "transform": {
+      "^.+\\.tsx?$": "<rootDir>/node_modules/ts-jest/preprocessor.js"
+    },
+    "modulePathIgnorePatterns": ["<rootDir>/dist"],
+    "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)$",
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "jsx",
+      "json"
+    ]
+  }
+}
