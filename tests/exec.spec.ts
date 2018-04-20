@@ -8,18 +8,17 @@
  *   Red Hat, Inc. - initial API and implementation
  */
 
-import * as fs from 'fs';
-import { Exec } from '../src/exec';
+import * as fs from "fs";
+import { Exec } from "../src/exec";
 
-describe('Test Exec', () => {
+describe("Test Exec", () => {
 
-    test('test exec', async () => {
+    test("test exec", async () => {
         const result = await Exec.run("echo 'foo'");
-        expect(result).toBe('foo\n');
+        expect(result).toBe("foo\n");
     });
 
-
-    test('test exec error', async () => {
+    test("test exec error", async () => {
         let error;
         try {
             await Exec.run("invalid-command-not-exists");

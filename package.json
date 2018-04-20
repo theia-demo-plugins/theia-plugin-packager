@@ -44,7 +44,7 @@
     "test": "jest",
     "test-watch": "jest --watchAll",
     "format-code": "tsfmt -r",
-    "tslint": "tslint --fix src/*.ts src/**/*.ts tests/**/*.ts"
+    "tslint": "tslint --fix src/*.ts src/**/*.ts tests/*.ts tests/**/*.ts"
   },
   "jest": {
     "collectCoverage": true,
