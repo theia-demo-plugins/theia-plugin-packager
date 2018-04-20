@@ -38,7 +38,7 @@ export class Validate {
     public validateEngine(pluginPackageJson: any, packageJsonPath: string): void {
 
         const missingEngineSuggest = "You need to add "
-            + chalk.italic('\n  "engines": \{\n    "theia": "latest"\n  \}\n')
+            + chalk.italic('\n  "engines": \{\n    "theiaPlugin": "latest"\n  \}\n')
             + "\(you may replace latest with a semver version)";
         if (!(pluginPackageJson.engines)) {
             throw new CliError('There is no "engines" section in the '
