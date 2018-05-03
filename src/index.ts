@@ -24,8 +24,8 @@ const commandArgs = yargs
         handler: async () => {
             try {
                 const pluginRootFolder = path.resolve(process.cwd());
-                const moduleName = (await readPkg()).name;
-                const zipPath = path.resolve(pluginRootFolder + path.sep + moduleName + ".zip");
+                const moduleName = (await readPkg()).name.replace("@", "").replace(/\W/g, "_");
+                const zipPath = path.resolve(pluginRootFolder + path.sep + moduleName + ".theia");
                 const assembly = new Assembly(pluginRootFolder, zipPath);
                 const result = await assembly.create();
                 Logger.info(result);

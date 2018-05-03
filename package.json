@@ -33,6 +33,7 @@
     "unzipper": "^0.8.13"
   },
   "files": [
+    "dist",
     "src"
   ],
   "scripts": {
@@ -52,7 +53,9 @@
     "transform": {
       "^.+\\.tsx?$": "<rootDir>/node_modules/ts-jest/preprocessor.js"
     },
-    "modulePathIgnorePatterns": ["<rootDir>/dist"],
+    "modulePathIgnorePatterns": [
+      "<rootDir>/dist"
+    ],
     "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)$",
     "moduleFileExtensions": [
       "ts",
