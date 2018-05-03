@@ -12,7 +12,7 @@ import * as path from "path";
 import * as yargs from "yargs";
 import { Assembly } from "./assembly";
 import { CliError } from "./cli-error";
-import { Logger } from "./Logger";
+import { Logger } from "./logger";
 
 import * as readPkg from "read-pkg";
 
