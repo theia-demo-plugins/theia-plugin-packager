@@ -1,12 +1,12 @@
-/*
- * Copyright (c) 2018 Red Hat, Inc.
- * All rights reserved. This program and the accompanying materials are made
- * available under the terms of the Eclipse Public License 2.0
- * which is available at https://www.eclipse.org/legal/epl-2.0/
- *
- * Contributors:
- *   Red Hat, Inc. - initial API and implementation
- */
+/*********************************************************************
+* Copyright (c) 2018 Red Hat, Inc.
+*
+* This program and the accompanying materials are made
+* available under the terms of the Eclipse Public License 2.0
+* which is available at https://www.eclipse.org/legal/epl-2.0/
+*
+* SPDX-License-Identifier: EPL-2.0
+**********************************************************************/
 
 import chalk from "chalk";
 import * as fs from "fs";
@@ -22,6 +22,7 @@ import { Zip } from "./zip";
 
 /**
  * Generates the plugin assembly (zip file)
+ * @author Florent Benoit
  */
 export class Assembly {
 

@@ -1,18 +1,22 @@
-/*
- * Copyright (c) 2018 Red Hat, Inc.
- * All rights reserved. This program and the accompanying materials are made
- * available under the terms of the Eclipse Public License 2.0
- * which is available at https://www.eclipse.org/legal/epl-2.0/
- *
- * Contributors:
- *   Red Hat, Inc. - initial API and implementation
- */
+/*********************************************************************
+* Copyright (c) 2018 Red Hat, Inc.
+*
+* This program and the accompanying materials are made
+* available under the terms of the Eclipse Public License 2.0
+* which is available at https://www.eclipse.org/legal/epl-2.0/
+*
+* SPDX-License-Identifier: EPL-2.0
+**********************************************************************/
 
 import chalk from "chalk";
 import * as fs from "fs";
 import * as path from "path";
 import { CliError } from "./cli-error";
 
+/**
+ * Validate the plugin before running packaging on it.
+ * @author Florent Benoit
+ */
 export class Validate {
 
     constructor(readonly pluginRootFolder: string) {
